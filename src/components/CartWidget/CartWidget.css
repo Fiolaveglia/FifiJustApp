@@ -1,0 +1,12 @@
+.CartWidget {
+    color: #66806A;
+    display: flex;
+    align-items: center;
+}
+.CartWidgetCant{
+    margin: 8px;
+}
+.Quantity {
+    padding: 5px;
+    margin-top: 5px;
+}

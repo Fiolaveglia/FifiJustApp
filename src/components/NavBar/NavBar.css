@@ -1,0 +1,20 @@
+nav {
+    margin-top: 20px;
+}
+.app-header {
+    margin-top: 40px;
+    width: 100%;
+}
+.Logo {
+    width: 125px;
+    height: 125px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+h1 {
+    text-align: center;
+    font-size: 48px;
+}

@@ -1,0 +1,13 @@
+h2 {
+    text-align: center;
+    color: #FFC286;
+    text-shadow: 0.5px 0.5px #DFA770;
+}
+.CardContainer {
+    display: flex;
+    justify-content: space-around;
+}
+.card-body {
+    text-align: center;
+    margin: 15px;
+}

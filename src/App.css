@@ -1,0 +1,9 @@
+* {
+    font-family: 'Recoleta';
+    color: #66806A;
+}
+
+@font-face {
+    font-family: 'Recoleta';
+    src: url(./fuentes/Recoleta-RegularDEMO.otf);
+}
