@@ -5,7 +5,9 @@ h2 {
 }
 .CardContainer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    margin: 20px;
 }
 .card-body {
     text-align: center;

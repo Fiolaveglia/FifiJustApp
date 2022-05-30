@@ -17,7 +17,6 @@ const ItemListContainer = (props) => {
 
     return (
     <div>
-        <h2>{props.greeting}</h2>
         <div className='CardContainer'>
             <ItemList productos = {items} />
         </div>
