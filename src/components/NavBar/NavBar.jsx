@@ -1,16 +1,16 @@
 import './NavBar.css'
-import Buttons from '../Buttons/Buttons'
 import CartWidget from '../CartWidget/CartWidget'
+import {Link} from 'react-router-dom'
 
 
 const NavBar = () => {
     return (
         <nav>
             <div className="navbar">
-                <img className="Logo" src= "./img/logo.png" alt="logo"></img>
-                <Buttons class = 'ButtonNav' text='Floral' />
-                <Buttons class='ButtonNav' text='Citricos'/>
-                <Buttons class='ButtonNav' text='Herbales'/>
+                <Link to="/"><img className="Logo" src= "./img/logo.png" alt="logo"></img></Link>
+                <Link to = "/florales" className='ButtonNav' >Florales</Link>
+                <Link to = "/citricos" className='ButtonNav'>Citricos</Link>
+                <Link to = "/herbales" className='ButtonNav'>Herbales</Link>
                 <CartWidget cantidad = {8}/>
             </div>
             <h1>AROMATERAPIA</h1>
@@ -19,4 +19,4 @@ const NavBar = () => {
 }
 
 
-export default NavBar
+export default NavBar 
