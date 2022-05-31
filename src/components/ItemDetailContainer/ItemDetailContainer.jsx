@@ -7,17 +7,17 @@ import '../ItemListContainer/ItemListContainer.css'
 
 
 const ItemDetailContainer = () => {
-    const [detalle, setDetalle] = useState({})
+    const [detalle, setDetalle] = useState()
     const {productId} = useParams ()
 
     useEffect(() => {
         customFetch(1000, Productos)
         .then(resp => setDetalle(resp.find(p => p.id === productId)))
     }, [productId])
-
+    
     return (
         <div className='CardContainer'>
-            <ItemDetail detalle = {detalle} />
+            <ItemDetail {...detalle} />
         </div>
     )
 }

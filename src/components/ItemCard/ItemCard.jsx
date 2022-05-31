@@ -1,10 +1,9 @@
 import './ItemCard.css'
+import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import Buttons from '../Buttons/Buttons';
 
 
 function ItemCard (props) {
-    
     
     return (
         <Card key={props.id} style={{ width: '18rem' }}>
@@ -12,7 +11,7 @@ function ItemCard (props) {
             <Card.Body>
                 <Card.Title><h3>Aceite de {props.nombre}</h3></Card.Title>
             </Card.Body>
-            <Buttons class = "DetailButton" text="Ver detalle"/>
+            <Link to={`/detail/${props.id}`}>Ver detalle</Link>
         </Card>
     )
 }
