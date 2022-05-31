@@ -9,12 +9,11 @@ import '../ItemListContainer/ItemListContainer.css'
 const ItemDetailContainer = () => {
     const [detalle, setDetalle] = useState({})
     const {productId} = useParams ()
-    console.log(productId)
 
     useEffect(() => {
         customFetch(1000, Productos)
         .then(resp => setDetalle(resp.find(p => p.id === productId)))
-    }, [detalle])
+    }, [productId])
 
     return (
         <div className='CardContainer'>

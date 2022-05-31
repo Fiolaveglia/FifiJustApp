@@ -16,7 +16,7 @@ function App() {
         </header>
         <Routes>
           <Route path = "/" element = {<ItemListContainer/>} />
-          <Route path = "/detail/:productId" element = {<ItemDetailContainer/>}/>
+          <Route path = "/detail/:productId" element = {<ItemDetailContainer />}/>
           <Route path = "*" element = {<h1>PAGE NOT FOUND</h1>} />
 
         </Routes>
