@@ -12,7 +12,7 @@ const ItemDetail = (props) => {
         <div>
             <h2>Detalle del producto</h2>
             <Card key={props.id} style={{ width: '35rem'}}>
-                <Card.Img variant="top" src={props.img} alt={props.nombre} />
+                <Card.Img variant="top" className='card-img-item' src={props.img} alt={props.nombre} />
                 <Card.Body>
                     <Card.Title><h3>Aceite de {props.nombre}</h3></Card.Title>
                     <Card.Text className="text-detail">

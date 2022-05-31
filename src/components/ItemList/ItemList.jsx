@@ -4,7 +4,7 @@ function ItemList ({productos}) {
     return (
         productos.map (prod => (
             <ItemCard 
-            key = {prod.id}
+            id = {prod.id}
             nombre = {prod.nombre}
             precio = {prod.precio}
             img = {prod.img}
