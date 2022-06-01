@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
     }, [productId])
 
     if (loading) {
-        return <h1>Loading...</h1>
+        return <h1>Cargando...</h1>
     }
 
 

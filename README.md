@@ -28,7 +28,8 @@ La ruta al index de la aplicación es '/' dónde se muestra el componente ItemLi
 
 Para filtrar por categoría la ruta es '/category/:categoryId' la cual muestra el componente ItemListContainer pero con los productos filtrados por categoría. 
 
-Cada producto tiene su botón de detalle, la ruta para ver dicho detalle de producto es '/detalle/:productId' que muestra el componente ItemDetailContainer y agregar la cantidad que se desee, siempre y cuando la cantidad no sobrepase el stock, 
+Cada producto tiene su botón de detalle, la ruta para ver dicho detalle de producto es '/detalle/:productId' que muestra el componente ItemDetailContainer y agregar la cantidad que se desee, siempre y cuando la cantidad no sobrepase el stock. 
+
 
 
 
