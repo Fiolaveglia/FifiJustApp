@@ -5,7 +5,7 @@
 }
 .Cart{
     width: 32px;
-    color: #66806A;
+    filter: invert(48%) sepia(3%) saturate(2202%) hue-rotate(78deg) brightness(98%) contrast(89%);
 }
 .CartWidgetCant{
     margin: 8px;
