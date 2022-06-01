@@ -19,7 +19,6 @@ function App() {
           <Route path="/category/:categoryId" element = {<ItemListContainer />}/>
           <Route path = "/detail/:productId" element = {<ItemDetailContainer />}/>
           <Route path = "*" element = {<h1>PAGE NOT FOUND</h1>} />
-
         </Routes>
       </BrowserRouter>
     </div>

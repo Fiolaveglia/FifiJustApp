@@ -8,25 +8,33 @@ import { useParams } from 'react-router-dom'
 const ItemListContainer = (props) => {
     
     const [items, setItems] = useState ([]); 
+    const [loading, setLoading] = useState(true)
     const {categoryId} = useParams()
-    console.log(categoryId)
 
     useEffect (() => {
         if (!categoryId) {
-            customFetch(1000, Productos)
-        .then(resp => setItems(resp))
+            customFetch(2000, Productos)
+            .then(resp => setItems(resp))
+            .catch(error => console.log(error))
+            .finally(() => setLoading(false))        
         } else {
-            customFetch(1000, Productos)
+            customFetch(2000, Productos)
         .then(resp => setItems(resp.filter(p => p.categoria === categoryId)))
+        .catch(error => console.log(error))
+        .finally(() => setLoading(false))        
         }
         
     }, [categoryId]);
+
+    if (loading) {
+        return <h1>Loading...</h1>
+    }
 
 
     return (
     <div>
         <div className='CardContainer'>
-            <ItemList productos = {items} />
+            {items.length > 0 ? <ItemList productos = {items} /> : <h2> No hay productos</h2>}
         </div>
     </div>)
 }

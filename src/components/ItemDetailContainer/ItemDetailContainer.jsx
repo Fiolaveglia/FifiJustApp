@@ -7,17 +7,27 @@ import '../ItemListContainer/ItemListContainer.css'
 
 
 const ItemDetailContainer = () => {
-    const [detalle, setDetalle] = useState()
+    const [detalle, setDetalle] = useState([])
+    const [loading, setLoading] = useState(true)
     const {productId} = useParams ()
 
     useEffect(() => {
-        customFetch(1000, Productos)
+        customFetch(2000, Productos)
         .then(resp => setDetalle(resp.find(p => p.id === productId)))
+        .catch(error => console.log(error))
+        .finally(() => setLoading(false))        
+
     }, [productId])
+
+    if (loading) {
+        return <h1>Loading...</h1>
+    }
+
+
     
     return (
         <div className='CardContainer'>
-            <ItemDetail {...detalle} />
+            {detalle.length > 0 ? <ItemDetail {...detalle}/> : <h2> No hay productos</h2>}
         </div>
     )
 }
