@@ -3,6 +3,10 @@
     display: flex;
     align-items: center;
 }
+.Cart{
+    width: 32px;
+    color: #66806A;
+}
 .CartWidgetCant{
     margin: 8px;
 }
