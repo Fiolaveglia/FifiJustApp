@@ -17,8 +17,7 @@ const ItemListContainer = (props) => {
         .then(resp => setItems(resp))
         } else {
             customFetch(1000, Productos)
-            .then(resp => setItems(resp.filter(p => p.categoria === categoryId)))
-    
+        .then(resp => setItems(resp.filter(p => p.categoria === categoryId)))
         }
         
     }, [categoryId]);
