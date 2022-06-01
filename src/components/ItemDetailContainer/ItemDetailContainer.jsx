@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
     
     return (
         <div className='CardContainer'>
-            {detalle.length > 0 ? <ItemDetail {...detalle}/> : <h2> No hay productos</h2>}
+            {<ItemDetail {...detalle}/> }
         </div>
     )
 }
