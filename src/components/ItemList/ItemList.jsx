@@ -8,7 +8,7 @@ function ItemList ({productos}) {
             nombre = {prod.nombre}
             precio = {prod.precio}
             img = {prod.img}
-            categoria = {prod.category}
+            categoria = {prod.categoria}
             stock = {prod.stock}
             detalle = {prod.detalle}
             />
