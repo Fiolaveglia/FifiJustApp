@@ -30,6 +30,14 @@ Para filtrar por categoría la ruta es '/category/:categoryId' la cual muestra e
 
 Cada producto tiene su botón de detalle, la ruta para ver dicho detalle de producto es '/detalle/:productId' que muestra el componente ItemDetailContainer y agregar la cantidad que se desee, siempre y cuando la cantidad no sobrepase el stock. 
 
+## Demo de la aplicación 
+
+![Alt Text](./public/img/FifijustApp.gif)
+
+### Autora 
+
+[@fiolaveglia](https://github.com/Fiolaveglia)
+
 
 
 
