@@ -1,4 +1,3 @@
-//import './assets/css/fonts.css';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import NavBar from './components/NavBar/NavBar';
