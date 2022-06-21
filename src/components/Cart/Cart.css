@@ -1,0 +1,31 @@
+.columns {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+}
+.columns span {
+    margin: 0 auto;
+}
+.hidden {
+    visibility: hidden;
+}
+.product-image img {
+    width: 90px;
+}
+.product-quantity input {
+    width: 40px;
+    border: 1 px solid #66806A;
+    padding: 5px;
+}
+.botones {
+    display: flex;
+    justify-content: center;
+    
+}
+h3.total-price {
+    text-align: end;
+    margin-right: 130px;
+}

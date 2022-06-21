@@ -1,29 +1,39 @@
-import Card from 'react-bootstrap/Card';
+import Card from 'react-bootstrap/Card'
+import {useState, useContext} from 'react'
+import {Link} from 'react-router-dom'
+import CartContext from '../../context/CartContext';
 import ItemCount from "../ItemCount/ItemCount";
 import '../ItemCard/ItemCard.css'
 
-const ItemDetail = (props) => {
-    
-    const onAdd = (cant) => {
-        console.log(`Se agregaron ${cant} de productos al carrito`)
+
+const ItemDetail = ({id, nombre, precio, img, detalle, stock, categoria}) => {
+
+    const [cantidad, setCantidad] = useState(0)
+
+    const {agregarItem, obtenerCantidadProducto} = useContext(CartContext)
+
+    const valorInicial = obtenerCantidadProducto(id) 
+
+    const onAdd = (cantidad) => {
+        setCantidad(cantidad)
+        agregarItem ({id, nombre, precio, img, cantidad}) 
     }
     
     return (
         <div>
             <h2>Detalle del producto</h2>
-            <Card key={props.id} style={{ width: '35rem'}}>
-                <Card.Img variant="top" className='card-img-item' src={props.img} alt={props.nombre} />
+            <Card className='detail-card'key={id} style={{ width: '35rem'}}>
+                <Card.Img variant="top" className='card-img-item' src={img} alt={nombre} />
                 <Card.Body>
-                    <Card.Title><h3>Aceite de {props.nombre}</h3></Card.Title>
+                    <Card.Title><h3>Aceite de {nombre}</h3></Card.Title>
+                    <Card.Title><h4>{categoria}</h4></Card.Title>
                     <Card.Text className="text-detail">
-                        {props.detalle}
+                        {detalle}
                     </Card.Text>
-                    <ItemCount stock={props.stock} inicial={0} onAdd={onAdd}/>
+                    {cantidad > 0 ? <Link to='/cart' className='ButtonDetail Shop'>Finalizar compra</Link> : <ItemCount stock={stock} inicial={valorInicial === 0 ? 1 : valorInicial} onAdd={onAdd}/>}
                 </Card.Body>
             </Card>
         </div>
     )
-
 }
-
 export default ItemDetail

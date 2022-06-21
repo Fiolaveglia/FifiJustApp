@@ -15,10 +15,10 @@ nav {
     justify-content: space-around;
 }
 .ButtonNav {
+    color: #66806A;
     text-decoration: none;
     font-size: 20px;
     margin: 40px 80px;
-    background-color:#fff;
     padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid #fff;
@@ -44,3 +44,4 @@ h1 {
     text-align: center;
     font-size: 48px;
 }
+
