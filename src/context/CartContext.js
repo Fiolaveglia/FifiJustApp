@@ -5,6 +5,7 @@ const CartContext = createContext()
 export const CartContextProvider = ({children}) => {
     const [carrito, setCarrito] = useState([])
 
+
     const agregarItem = (productoParaAgregar) => {
         /* Funcion que verifica si el producto se encuentra en el carrito, si lo encuentra le suma la cantidad, sino lo agrega*/
         if (!estaEnCarrito (productoParaAgregar.id)) {
@@ -59,8 +60,17 @@ export const CartContextProvider = ({children}) => {
         return total 
     }
 
+    const modificaCantidad = (id) => {
+        carrito.forEach(p => {
+            if (p.id === id && p.cantidad < p.stock) {
+                p.cantidad +=1; 
+            } 
+        })
+        setCarrito([...carrito])
+    }
+
     return (
-        <CartContext.Provider value = {{carrito, agregarItem, obtenerCantidad, obtenerCantidadProducto, eliminarProducto, limpiarCarrito, sumaTotal}}>
+        <CartContext.Provider value = {{carrito, agregarItem, obtenerCantidad, obtenerCantidadProducto, eliminarProducto, limpiarCarrito, sumaTotal, modificaCantidad}}>
             {children}
         </CartContext.Provider>
     )

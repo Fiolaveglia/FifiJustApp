@@ -8,7 +8,7 @@ import Swal from 'sweetalert2'
 
 const Formulario = () => {
 
-    const { register} = useForm();
+    const {register} = useForm();
 
     const {carrito, sumaTotal, limpiarCarrito} = useContext(CartContext)
 

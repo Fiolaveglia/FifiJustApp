@@ -17,6 +17,6 @@ p {
     letter-spacing: 0.25px;
 }
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 

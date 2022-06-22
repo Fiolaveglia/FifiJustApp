@@ -6,7 +6,7 @@ import './Cart.css'
 
 const Cart = () => {
 
-    const {carrito, eliminarProducto, limpiarCarrito, obtenerCantidad, sumaTotal} = useContext(CartContext)
+    const {carrito, eliminarProducto, limpiarCarrito, obtenerCantidad, sumaTotal, modificaCantidad} = useContext(CartContext)
 
     const cant = obtenerCantidad()
 
@@ -26,7 +26,9 @@ const Cart = () => {
                             <div className="product-title">Aceite de {p.nombre}</div>
                             <div className="product-price">$ {p.precio}</div>
                             <div className="product-quantity">
-                                <input type="number" value={p.cantidad} min="1" />
+                                <button className='ButtonCounter' onClick={()=> modificaCantidad(p.id)}>-</button>
+                                <p>{p.cantidad}</p>
+                                <button className='ButtonCounter' onClick={() => modificaCantidad(p.id)}>+</button>
                             </div>
                             <div className="product-removal">
                             <button className="remove-product" onClick={() => eliminarProducto(p.id)}>

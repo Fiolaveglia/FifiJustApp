@@ -22,7 +22,7 @@ const ItemDetail = ({id, nombre, precio, img, detalle, stock, categoria}) => {
     return (
         <div>
             <h2>Detalle del producto</h2>
-            <Card className='detail-card d-flex'key={id} style={{ width: '60rem', display: 'flex', alignItems: 'center'}}>
+            <Card className='detail-card'key={id} style={{ width: '60rem', display: 'flex', flexDirection: 'row', alignItems: 'center', boxShadow : '#66806A 0px 0px 10px 0px' }}>
                 <Card.Img variant="top" className='card-img-item' src={img} alt={nombre} />
                 <Card.Body style={{margin: '25px'}}>
                     <h3>Aceite de {nombre}</h3>

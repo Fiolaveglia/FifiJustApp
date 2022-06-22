@@ -15,10 +15,9 @@
 .product-image img {
     width: 90px;
 }
-.product-quantity input {
-    width: 40px;
-    border: 1 px solid #66806A;
-    padding: 5px;
+.product-quantity {
+    display: flex;
+    align-items: flex-end;
 }
 .botones {
     display: flex;
