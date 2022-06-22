@@ -1,9 +1,18 @@
 .card {
     margin: 40px 20px;
-    padding: 20px;
+    padding: 30px;
 }
 .card-img-top {
     border: 1px solid #eee;
+    border-radius: 10px;
+    width: 285px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.card-img-item {
+    width: 500px;
 }
 .ButtonDetail {
     text-decoration: none;
@@ -27,4 +36,7 @@
 .ButtonDetail:hover {
     color: #66806A!important;
     background-color: #FFC286!important;
+}
+div.detail-card div.card-body {
+    margin-bottom: 20px;
 }
