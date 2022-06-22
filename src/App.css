@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
- 
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 * {
     font-family: 'Recoleta';
     color: #66806A;
@@ -11,8 +11,12 @@
 }
 
 p {
-    font-family: 'Lato', sans-serif; 
+    font-family: 'Raleway', sans-serif; 
     text-align: left;
     font-size: 14px;
+    letter-spacing: 0.25px;
+}
+a {
+    text-decoration: none;
 }
 

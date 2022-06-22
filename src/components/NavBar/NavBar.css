@@ -27,7 +27,7 @@ nav {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     transition: all 1s;
-    -webkit-transition: all 1s;
+    -webkit-transition: all 0.5s;
     -moz-transition: all 1s;
     -ms-transition: all 1s;
     -o-transition: all 1s;

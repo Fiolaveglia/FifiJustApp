@@ -22,9 +22,9 @@ const ItemDetail = ({id, nombre, precio, img, detalle, stock, categoria}) => {
     return (
         <div>
             <h2>Detalle del producto</h2>
-            <Card className='detail-card row'key={id} style={{ width: '35rem'}}>
-                <Card.Img variant="top" className='card-img-item col-6' src={img} alt={nombre} />
-                <Card.Body className='col-6'>
+            <Card className='detail-card d-flex'key={id} style={{ width: '60rem', display: 'flex', alignItems: 'center'}}>
+                <Card.Img variant="top" className='card-img-item' src={img} alt={nombre} />
+                <Card.Body style={{margin: '25px'}}>
                     <h3>Aceite de {nombre}</h3>
                     <h4>{categoria}</h4>
                     <Card.Text className="text-detail">
