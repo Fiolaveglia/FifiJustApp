@@ -60,19 +60,19 @@ export const CartContextProvider = ({children}) => {
         return total 
     }
 
-    const modificaCantidad = (id) => {
-        carrito.forEach(p => {
-            if (p.id === id && p.stock < p.cantidad) {
-                p.cantidad +=1; 
-            } else {
-                p.cantidad -=1;
-            }
-        })
-        setCarrito([...carrito])
-    }
+    // const modificaCantidad = (id) => {
+    //     carrito.forEach(p => {
+    //         if (p.id === id && p.stock < p.cantidad) {
+    //             p.cantidad +=1; 
+    //         } else {
+    //             p.cantidad -=1;
+    //         }
+    //     })
+    //     setCarrito([...carrito])
+    // }
 
     return (
-        <CartContext.Provider value = {{carrito, agregarItem, obtenerCantidad, obtenerCantidadProducto, eliminarProducto, limpiarCarrito, sumaTotal, modificaCantidad}}>
+        <CartContext.Provider value = {{carrito, agregarItem, obtenerCantidad, obtenerCantidadProducto, eliminarProducto, limpiarCarrito, sumaTotal/*, modificaCantidad*/}}>
             {children}
         </CartContext.Provider>
     )

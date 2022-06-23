@@ -1,6 +1,6 @@
 import {useForm} from "react-hook-form";
 import {useState, useContext} from 'react'
-import {addDoc, collection} from 'firebase/firestore'
+import {addDoc, collection, getDocs, query, where, documentId, writeBatch} from 'firebase/firestore'
 import {db} from '../../services/Firebase'
 import {Link} from 'react-router-dom'
 import CartContext from '../../context/CartContext'
@@ -27,17 +27,61 @@ const Formulario = () => {
             total: sumaTotal()
         }
 
-        const coleccion = collection(db, 'ordenes')
-        addDoc(coleccion, ObjOrden).then(({ id }) => {
-            console.log(datos)
+        const ids = carrito.map(p => p.id); 
+        const batch = writeBatch(db)
+        const fueraStock = [];
+
+        const collectionRef = collection(db, 'Productos'); 
+
+        getDocs(query(collectionRef, where(documentId(), 'in', ids)))
+        .then(response => {
+            response.docs.forEach(doc => {
+                const dataDoc = doc.data()
+                const cantidadProductos = carrito.find(P => P.id === doc.id)?.cantidad
+
+                if (dataDoc.stock >= cantidadProductos) {
+                    batch.update(doc.ref, {stock: dataDoc.stock - cantidadProductos})
+                } else {
+                    fueraStock.push({id: doc.id, ...dataDoc})
+                }
+            })
+        }).then(() => {
+            if(fueraStock.length === 0) {
+                const coleccion = collection(db, 'ordenes')
+                return addDoc(coleccion, ObjOrden)
+            } else {
+                return Promise.reject({type: 'fuera_de_stock', Productos: fueraStock })
+            }
+        }).then(({id}) => {
+            batch.commit()
             Swal.fire({
                 title: `Gracias por tu compra ${datos.nombre}`,
                 text: `Se creo la orden con el id Nº ${id}`,
                 icon: 'success',
             })
+            limpiarCarrito(); 
+        }).catch(error => {
+            return Swal.fire({
+                    title: 'Error',
+                    text: 'No hay mas stock',
+                    icon: 'error',
+                })
         })
-        limpiarCarrito();
     }
+
+    //     const coleccion = collection(db, 'ordenes')
+    //     addDoc(coleccion, ObjOrden).then(({ id }) => {
+    //         console.log(datos)
+    //         Swal.fire({
+    //             title: `Gracias por tu compra ${datos.nombre}`,
+    //             text: `Se creo la orden con el id Nº ${id}`,
+    //             icon: 'success',
+    //         })
+    //     })
+    //     limpiarCarrito();
+    // }
+
+
 
     const handleInputChange = (e) => {
         setDatos({ 
@@ -46,6 +90,7 @@ const Formulario = () => {
 
         })
     }
+
 
     const handleSubmit = (e) => {
         if(e.target.name === '') {
