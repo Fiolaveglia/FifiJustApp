@@ -62,9 +62,11 @@ export const CartContextProvider = ({children}) => {
 
     const modificaCantidad = (id) => {
         carrito.forEach(p => {
-            if (p.id === id && p.cantidad < p.stock) {
+            if (p.id === id && p.stock < p.cantidad) {
                 p.cantidad +=1; 
-            } 
+            } else {
+                p.cantidad -=1;
+            }
         })
         setCarrito([...carrito])
     }
