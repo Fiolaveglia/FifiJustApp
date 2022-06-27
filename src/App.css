@@ -19,4 +19,8 @@ p {
 a {
     text-decoration: none !important;
 }
-
+input {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 14px !important;
+    padding: 10px !important;
+}
