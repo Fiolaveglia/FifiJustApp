@@ -2,13 +2,15 @@
 
 Este proyecto trata de un ecommerce web de Aceites esenciales donde podés ver los productos, filtrarlos por categoría y ver el detalle de cada uno. 
 
-## Requisitos para inicializar el proyecto
+## Correr el proyecto localmente
 
 Clonar el proyecto ejecutando en consola los siguientes comandos: 
 
 ```bash
-  git clone https://github.com/Fiolaveglia/React-Proyecto.git 
- ```
+  $ git clone https://github.com/Fiolaveglia/React-Proyecto.git 
+  
+  $ cd React Proyecto/fifijust
+   ```
 
  Ejecutar: 
 
@@ -17,6 +19,12 @@ Clonar el proyecto ejecutando en consola los siguientes comandos:
   
   npm start
 ```
+
+## Variables de entorno
+
+See [`.env.example`] ()
+
+
 El proyecto se va a ejecutar en [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
 
 La página se va a recargar cada vez que realices cambios y los guardes.\
