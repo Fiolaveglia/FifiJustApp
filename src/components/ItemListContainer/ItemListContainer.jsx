@@ -3,7 +3,7 @@ import ItemList from '../ItemList/ItemList'
 import {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import { css } from "@emotion/react";
-import { DotLoader} from "react-spinners";
+import {DotLoader} from "react-spinners";
 import {getDocs, collection, query, where} from 'firebase/firestore'
 import {db} from '../../services/Firebase'
 

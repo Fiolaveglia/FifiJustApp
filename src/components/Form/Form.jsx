@@ -1,5 +1,6 @@
 import {useForm} from "react-hook-form";
 import {useState, useContext} from 'react'
+import {useNavigate} from 'react-router-dom'
 import {addDoc, collection, getDocs, query, where, documentId, writeBatch} from 'firebase/firestore'
 import {db} from '../../services/Firebase'
 import CartContext from '../../context/CartContext'
@@ -18,10 +19,11 @@ const Formulario = () => {
     margin: 20vh auto;
     `;
 
-
     const {register, formState: {errors}, handleSubmit} = useForm();
 
     const {carrito, sumaTotal, limpiarCarrito} = useContext(CartContext)
+
+    const navegacion = useNavigate()
 
     const [datos, setDatos] = useState({
         nombre: '', 
@@ -80,9 +82,9 @@ const Formulario = () => {
                 title: `Gracias por tu compra ${datos.nombre}`,
                 text: `Se creo la orden con el id Nº ${id}`,
                 icon: 'success',
-            })
+            }); 
+            navegacion('/')
         }).catch(error => {
-            console.log(error)
             Swal.fire({
                     title: 'Error',
                     text: 'No hay mas stock',
@@ -100,7 +102,6 @@ const Formulario = () => {
         </div>
         )
     }
-
 
     return (
         <div className="container">
