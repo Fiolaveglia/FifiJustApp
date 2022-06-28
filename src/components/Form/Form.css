@@ -1,0 +1,23 @@
+.swal-title {
+    margin: 0px;
+    margin-bottom: 28px;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+.swal-text {
+    font-family: 'Raleway', sans-serif;
+}
+.swal-footer {
+    text-align: center;
+}
+.swal-button{
+    background-color: #66806A;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+.swal-button:not([disabled]):hover  {
+    background-color: #FFC286;
+}

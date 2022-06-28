@@ -3,10 +3,12 @@ import {useState, useContext} from 'react'
 import {useNavigate} from 'react-router-dom'
 import {addDoc, collection, getDocs, query, where, documentId, writeBatch} from 'firebase/firestore'
 import {db} from '../../services/Firebase'
-import CartContext from '../../context/CartContext'
-import Swal from 'sweetalert2'
 import { css } from "@emotion/react";
 import { DotLoader} from "react-spinners";
+import CartContext from '../../context/CartContext'
+import swal from 'sweetalert';
+import './Form.css'
+
 
 
 
@@ -78,18 +80,12 @@ const Formulario = () => {
         }).then(({id}) => {
             batch.commit(); 
             limpiarCarrito(); 
-            Swal.fire({
-                title: `Gracias por tu compra ${datos.nombre}`,
-                text: `Se creo la orden con el id Nº ${id}`,
-                icon: 'success',
-            }); 
+            swal( `Gracias por tu compra ${datos.nombre}`, `Se creó la orden con el id Nº ${id}`, "success");
             navegacion('/')
         }).catch(error => {
-            Swal.fire({
-                    title: 'Error',
-                    text: 'No hay mas stock',
-                    icon: 'error',
-                })
+            swal( 'Error', 'No quedan tantas unidades como solicitaste', "error");
+            limpiarCarrito(); 
+            navegacion('/');
         }).finally(() => {
             setLoading(false)
         })
