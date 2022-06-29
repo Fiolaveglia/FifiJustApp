@@ -32,6 +32,16 @@ export const detalleProducto = (productId) => {
     })
 }
 
-
-
-
+export const obtenerCategorias = (categoryId) => {
+    return new Promise((resolve, reject) => {
+        getDocs(collection(db, 'categorias'))
+        .then(response => {
+            const categories = response.docs.map(doc => {
+                return{id: doc.id, ...doc.data()}
+            })
+            resolve(categories)
+        }).catch(error => {
+            reject(error)
+        })
+    })
+}
