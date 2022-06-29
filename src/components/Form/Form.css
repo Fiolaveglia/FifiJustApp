@@ -1,3 +1,10 @@
+form {
+    width: 400px;
+    margin: 0 auto;
+}
+form>button {
+    margin-top: 40px!important;
+}
 .swal-title {
     margin: 0px;
     margin-bottom: 28px;

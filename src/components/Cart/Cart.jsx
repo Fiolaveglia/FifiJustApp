@@ -26,7 +26,7 @@ const Cart = () => {
                             <div className="product-title">Aceite de {p.nombre}</div>
                             <div className="product-price">$ {p.precio}</div>
                             <div className="product-quantity">
-                                <span>{p.cantidad}</span>
+                                <span>Cantidad: {p.cantidad}</span>
                             </div>
                             <div className="product-removal">
                                 <button className="remove-product" onClick={() => eliminarProducto(p.id)}>
@@ -39,7 +39,7 @@ const Cart = () => {
                         )
                     }
                 <div>
-                    <h5 className='total-price'>$ {sumaTotal()}</h5>
+                    <h5 className='total-price'>Total ${sumaTotal()}</h5>
                 </div>
                     
                 </div>

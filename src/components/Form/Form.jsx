@@ -86,7 +86,8 @@ const Formulario = () => {
             swal( 'Error', 'No quedan tantas unidades como solicitaste', "error");
             limpiarCarrito(); 
             navegacion('/');
-        }).finally(() => {
+        })
+        .finally(() => {
             setLoading(false)
         })
     }
@@ -108,7 +109,7 @@ const Formulario = () => {
                         type='text' 
                         name='nombre' 
                         placeholder='Escribe tu nombre' 
-                        className='form-control mb-2'
+                        className='form-control mb-4'
                         {...register('nombre', {required: true, maxLenght: 20})}
                         onChange={handleInputChange}
                         value={datos.nombre}
@@ -119,7 +120,7 @@ const Formulario = () => {
                         type='text' 
                         name='direccion' 
                         placeholder='Escribe tu direccion' 
-                        className='form-control mb-2' 
+                        className='form-control mb-4' 
                         {...register('direccion', {required: true, message: 'Campo requerido' })}
                         onChange={handleInputChange}
                         value={datos.direccion}
@@ -131,7 +132,7 @@ const Formulario = () => {
                         name='tel' 
                         placeholder='09xxxxxxx' 
                         pattern="[0-9]+"
-                        className='form-control mb-2' 
+                        className='form-control mb-4' 
                         {...register('tel', {required: true, message: 'Campo requerido' })}
                         onChange={handleInputChange}
                         value={datos.tel}
@@ -142,7 +143,7 @@ const Formulario = () => {
                         type='email' 
                         name='email' 
                         placeholder='ejemplo@mail.com' 
-                        className='form-control mb-2'
+                        className='form-control mb-4'
                         {...register('email', {required: true, message: 'Campo requerido' })}
                         onChange={handleInputChange}
                         value={datos.email}

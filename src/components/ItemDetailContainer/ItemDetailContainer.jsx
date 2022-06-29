@@ -1,7 +1,6 @@
-import {useState, useEffect} from 'react'
-import {useParams} from 'react-router-dom'
-import {getDoc, doc} from 'firebase/firestore'
-import {db} from '../../services/Firebase'
+import { useParams } from 'react-router-dom'
+import { detalleProducto } from '../../services/Firebase/firebase';
+import { useFirestore } from '../../hooks/useFirestore';
 import { css } from "@emotion/react";
 import { DotLoader} from "react-spinners";
 import ItemDetail from '../ItemDetail/ItemDetail'
@@ -9,35 +8,32 @@ import '../ItemListContainer/ItemListContainer.css'
 
 
 const ItemDetailContainer = () => {
-    const [detalle, setDetalle] = useState([])
-    const [loading, setLoading] = useState(true)
+
     const {productId} = useParams ()
+
+    const {isLoading, data, error} = useFirestore(() => detalleProducto(productId), [productId])
 
     const override = css`
     display: block;
     margin: 20vh auto;
     `;
 
-
-    useEffect(() => {
-        getDoc(doc(db, 'Productos',productId))
-        .then(resp => {
-            const producto = {id: resp.id, ...resp.data()}
-            setDetalle(producto)
-        }).catch(error => console.log(error))
-        .finally(() => setLoading(false))    }, [productId])
-
-    if (loading) {
+    if (isLoading) {
         return (
             <div className="sweet-loading">
-                <DotLoader loading={loading} color = {'#FFC286'} css={override} size={100} />
+                <DotLoader loading={isLoading} color = {'#FFC286'} css={override} size={100} />
             </div>
             )
     }
 
+    if(error) {
+        return <h1>Ha ocurrido un error</h1>
+    }
+
+
     return (
         <div className='CardContainer'>
-            {<ItemDetail {...detalle}/> }
+            {<ItemDetail {...data}/> }
         </div>
     )
 }

@@ -26,8 +26,9 @@
 }
 h5.total-price {
     text-align: end;
-    margin-right: 7.5rem;
+    margin-right: 11.5rem;
     margin-top: 15px;
+    font-weight: 700;
 }
 .cartDetail {
     width: 25px !important;
@@ -50,4 +51,7 @@ h5.total-price {
 .remove-product:hover {
     background-color: #66806A;
     color: #fff;
+}
+h2 {
+    margin: 40px 0;
 }
