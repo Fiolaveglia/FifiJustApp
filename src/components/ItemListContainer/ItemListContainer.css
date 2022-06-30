@@ -8,6 +8,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 20px;
+    padding-bottom: 60px;
 }
 .card-body {
     text-align: center;
