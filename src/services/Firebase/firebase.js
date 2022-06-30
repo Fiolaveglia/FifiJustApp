@@ -2,6 +2,8 @@ import {db} from '.'
 import {getDocs, getDoc, doc, collection, query, where} from 'firebase/firestore'
 
 
+
+
 export const obtenerProductos = (categoryId) => {
     return new Promise((resolve, reject)=> {
         const collectionRef = categoryId
@@ -20,19 +22,7 @@ export const obtenerProductos = (categoryId) => {
     }) 
 }
 
-export const detalleProducto = (productId) => {
-    return new Promise((resolve, reject) => {
-        getDoc(doc(db, 'Productos',productId))
-        .then(resp => {
-            const producto = {id: resp.id, ...resp.data()}
-            resolve(producto)
-        }).catch(error => {
-            reject(error)
-        })
-    })
-}
-
-export const obtenerCategorias = (categoryId) => {
+export const obtenerCategorias = () => {
     return new Promise((resolve, reject) => {
         getDocs(collection(db, 'categorias'))
         .then(response => {
@@ -45,3 +35,17 @@ export const obtenerCategorias = (categoryId) => {
         })
     })
 }
+
+export const detalleProducto = (productId) => {
+    return new Promise((resolve, reject) => {
+        getDoc(doc(db, 'Productos',productId))
+        .then(resp => {
+            const producto = {id: resp.id, ...resp.data()}
+            resolve(producto)
+        }).catch(error => {
+            reject(error)
+        })
+    })
+}
+
+
