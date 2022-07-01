@@ -12,7 +12,6 @@ const NavBar = () => {
     const {categoryId} = useParams()
 
     const {data, error} = useFirestore(() =>  obtenerCategorias(categoryId), [])
-    console.log(data)
 
     if(error) {
     return <h1>Ha ocurrido un error</h1>

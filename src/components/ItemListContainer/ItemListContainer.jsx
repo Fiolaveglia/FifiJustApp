@@ -9,10 +9,8 @@ import { useFirestore } from '../../hooks/useFirestore';
 const ItemListContainer = () => {
 
     const {categoryId} = useParams()
-    console.log(categoryId)
 
     const {isLoading, data, error} = useFirestore(() =>  obtenerProductos(categoryId), [categoryId])
-    console.log(data)
     
     const override = css`
                         display: block;
