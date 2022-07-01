@@ -44,7 +44,7 @@ En consola vas a poder visualizar los posibles errores que se presenten.
 
 ## Analisis de la aplicacion 
 
-La ruta principal es '/' dónde se muestra el componente ItemListContainer que trae todos los productos. 
+La ruta principal es '/' donde se muestra el componente ItemListContainer que trae todos los productos. 
 
 Para filtrar por categoría la ruta es '/category/:categoryId' la cual muestra el componente ItemListContainer pero con los productos filtrados por categoría. 
 
@@ -61,23 +61,24 @@ Una vez enviado el formulario a traves de una notificacion comunica si hubo algu
 ### Coleccion Productos
  
 | CAMPO | TIPO | VALOR |
+| ------ | ------ |------ |
 | categoria | string | Categoria del producto|
 | detalle | string | Detalle del producto |
 | img | string | Imagen del producto |
 | nombre | string | Nombre del producto |
 | stock | number | Stock del producto |
 | precio | number | Precio del producto |
-| ------ | ------ |------ |
 
 ### Coleccion Categorias
  
 | CAMPO | TIPO | VALOR |
-| descripcion | string | Nombre de la categoria|
 | ------ | ------ |------ |
+| descripcion | string | Nombre de la categoria|
 
 ### Coleccion Ordenes
  
 | CAMPO | SUBCAMPO | TIPO | VALOR |
+| ------ | ------ |------ |------ |
 | cliente | nombre | string | Nombre del cliente|
 |  | email | string | Email del cliente|
 |  | tel | number | Telefono del cliente|
@@ -87,7 +88,6 @@ Una vez enviado el formulario a traves de una notificacion comunica si hubo algu
 |  | img | string | Imagen del producto|
 |  | nombre | string | Nombre del producto|
 |  | precio | number | Precio del producto|
-| ------ | ------ |------ |
 
 
 
