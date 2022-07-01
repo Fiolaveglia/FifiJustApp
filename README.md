@@ -58,7 +58,7 @@ Una vez enviado el formulario a traves de una notificacion comunica si hubo algu
 
 ## Documentos de base de datos
 
-### Coleccion Productos
+### Colección Productos
  
 | CAMPO | TIPO | VALOR |
 | ------ | ------ |------ |
@@ -69,13 +69,13 @@ Una vez enviado el formulario a traves de una notificacion comunica si hubo algu
 | stock | number | Stock del producto |
 | precio | number | Precio del producto |
 
-### Coleccion Categorias
+### Colección Categorias
  
 | CAMPO | TIPO | VALOR |
 | ------ | ------ |------ |
 | descripcion | string | Nombre de la categoria|
 
-### Coleccion Ordenes
+### Colección Ordenes
  
 | CAMPO | SUBCAMPO | TIPO | VALOR |
 | ------ | ------ |------ |------ |
@@ -97,7 +97,7 @@ Ver ejemplo: [`.env.example`] (https://github.com/Fiolaveglia/React-Proyecto/blo
 
 ## Demo de la aplicación 
 
-![Alt Text](./public/img/FifijustApp.gif)
+![Alt Text](./public/img/demo.gif)
 
 ### Autora 
 
