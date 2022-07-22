@@ -1,14 +1,9 @@
-h2 {
-    text-align: center;
-    color: #FFC286;
-    text-shadow: 0.5px 0.5px #DFA770;
-}
 .CardContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 20px;
-    padding-bottom: 60px;
+    padding: 60px;
 }
 .card-body {
     text-align: center;

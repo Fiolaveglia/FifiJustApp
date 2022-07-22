@@ -43,3 +43,20 @@ h1 {
     text-align: center;
     font-size: 48px;
 }
+@media screen and (max-width: 600px) {
+    .navbar {
+        margin: 0 40px;
+    }
+    .Logo {
+        width: 90px;
+        height: 90px;
+    }
+    .ButtonNav {
+        text-align: center;
+        margin: 20px;
+    }
+    .ButtonNav:last-child {
+        margin: 20px 120px ;
+        padding-left: 20px;
+    }
+}

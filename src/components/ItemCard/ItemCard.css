@@ -1,6 +1,9 @@
 .card {
-    margin: 40px 20px;
-    padding: 30px;
+    border: none !important;
+}
+#xs {
+    font-size: 12px;
+    
 }
 .card-img-top {
     border: 1px solid #eee;
@@ -41,9 +44,31 @@
 div.detail-card div.card-body {
     margin-bottom: 20px;
 }
-.text-detail {
-    margin-bottom: 40px;
-}
 .Shop {
     margin: 0;
+}
+.carousel-indicators > button {
+    background-color: rgba(121, 121, 121, 0.842) !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    display: none;
+}
+@media screen and (max-width: 600px ) {
+    .ButtonDetail {
+        margin: 0;
+        text-align: center;
+        width: 120px;
+        margin: 0 auto;
+    }
+    .card-body, .card-text {
+        margin: 20px 0 60px!important;
+    }
 }

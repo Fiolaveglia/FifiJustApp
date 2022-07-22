@@ -23,7 +23,7 @@ const NavBar = () => {
             <Container>
                 <Navbar.Brand href="/">
                     <img
-                        className="Logo col-"
+                        className="Logo"
                         src="../img/logo.png"
                         alt="logo"
                     ></img>
@@ -36,7 +36,7 @@ const NavBar = () => {
                                 <NavLink
                                     key={cat.id}
                                     to={`/category/${cat.id}`}
-                                    className="ButtonNav col"
+                                    className="ButtonNav"
                                 >
                                     {cat.descripcion}
                                 </NavLink>
@@ -48,15 +48,6 @@ const NavBar = () => {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
-        // <nav className="navbar container">
-        //     <div className="row">
-        //         <NavLink to = "/"><img className="Logo col-" src= "../img/logo.png" alt="logo"></img></NavLink>
-        //         {data && data.map(cat =>
-        //                 <NavLink key={cat.id} to ={`/category/${cat.id}`} className='ButtonNav col'>{cat.descripcion}</NavLink>
-        //             )}
-        //         <NavLink to = "/cart"><CartWidget /></NavLink>
-        //     </div>
-        // </nav>
     );
 }
 
