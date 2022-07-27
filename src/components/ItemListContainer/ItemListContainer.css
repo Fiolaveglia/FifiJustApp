@@ -8,3 +8,28 @@
 .card-body {
     text-align: center;
 }
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+        margin: 30px 0 ;
+    }
+    .card{
+        height: 300px;
+    }
+    .CardContainer {
+        margin: 10px;
+        padding: 0;
+    }
+    .card-detail {
+        background-color: transparent !important;
+        color: transparent !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: none !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}

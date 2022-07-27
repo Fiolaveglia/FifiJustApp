@@ -11,7 +11,7 @@ function ItemCard (props) {
             <Card.Body>
                 <Card.Title><h3>Aceite de {props.nombre}</h3></Card.Title>
             </Card.Body>
-            <Link to={`/detail/${props.id}`} className='ButtonDetail' >Ver detalle</Link>
+            <Link to={`/detail/${props.id}`} className='ButtonDetail card-detail' >Ver detalle</Link>
         </Card>
     )
 }
