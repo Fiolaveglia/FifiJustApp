@@ -9,11 +9,6 @@ nav {
     width: 125px;
     height: 125px;
 }
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
 .ButtonNav {
     color: #66806A;
     text-decoration: none;
@@ -31,13 +26,24 @@ nav {
     -ms-transition: all 1s;
     -o-transition: all 1s;
 }
-.ButtonNav:hover {
+.ButtonNav:hover:not(:last-of-type) {
     background-color: #66806A;
     color: #fff;
 }
 .ButtonNav:active {
     background-color:  #FFC286;
     color: #66806A;
+}
+.ButtonNav:last-of-type{
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+}
+.ButtonNav:last-of-type:hover {
+    filter: brightness(0) saturate(100%) invert(97%) sepia(21%) saturate(3665%) hue-rotate(302deg) brightness(105%) contrast(101%);
+    -webkit-filter: brightness(0) saturate(100%) invert(97%) sepia(21%) saturate(3665%) hue-rotate(302deg) brightness(105%) contrast(101%);
 }
 h1 {
     text-align: center;

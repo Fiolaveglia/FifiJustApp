@@ -22,22 +22,13 @@ const NavBar = () => {
         <Navbar expand="lg">
             <Container>
                 <Navbar.Brand href="/">
-                    <img
-                        className="Logo"
-                        src="../img/logo.png"
-                        alt="logo"
-                    ></img>
+                    <img className="Logo" src="../img/logo.png" alt="logo"></img>
                 </Navbar.Brand>
-                <Navbar.Toggle className="hamb" aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        {data &&
-                            data.map((cat) => (
-                                <NavLink
-                                    key={cat.id}
-                                    to={`/category/${cat.id}`}
-                                    className="ButtonNav"
-                                >
+                        {data && data.map((cat) => (
+                                <NavLink key={cat.id} to={`/category/${cat.id}`} className="ButtonNav">
                                     {cat.descripcion}
                                 </NavLink>
                             ))}
