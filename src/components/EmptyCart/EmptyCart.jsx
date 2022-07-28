@@ -5,7 +5,7 @@ const EmptyCart = () => {
     return (
         
         <div className="empty-cart">
-            <h2>El carrito esta vacio</h2>
+            <h2 className='ec'>El carrito esta vacio</h2>
             <Link to='/' className='ButtonDetail'>Volver al sitio</Link>
         </div> 
     )

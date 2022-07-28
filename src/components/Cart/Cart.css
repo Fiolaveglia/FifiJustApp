@@ -52,3 +52,8 @@ h5.total-price {
     background-color: #66806A;
     color: #fff;
 }
+@media screen and (max-width: 600px) {
+    .columns {
+        flex-wrap: wrap !important;
+    }
+}

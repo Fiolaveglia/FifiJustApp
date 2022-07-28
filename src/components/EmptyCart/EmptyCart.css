@@ -5,3 +5,13 @@
     align-items: center;
     margin: 0 auto;
 }
+@media screen and (max-width: 600px) {
+    .empty-cart {
+        width: auto;
+        margin: 20px auto;
+    }
+    .ec {
+        color: #FFC286;
+    }
+
+}

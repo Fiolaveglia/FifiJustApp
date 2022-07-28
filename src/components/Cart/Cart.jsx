@@ -15,15 +15,15 @@ const Cart = () => {
             ? <EmptyCart/>
             : <div>
                 <h2>Detalle de compra</h2>
-                <div className='detail'>
+                <div className='detail container '>
                     { 
                         carrito.map (p => {
                         return (
-                        <div className="columns" key={p.id}>
-                            <div className="product-image">
+                        <div className="columns row" key={p.id}>
+                            <div className="product-image col-sm-6">
                                 <img src={p.img} alt= {p.nombre}/>
                             </div>
-                            <div className="product-title">Aceite de {p.nombre}</div>
+                            <div className="product-title col-sm-6">Aceite de {p.nombre}</div>
                             <div className="product-price">$ {p.precio}</div>
                             <div className="product-quantity">
                                 <span>Cantidad: {p.cantidad}</span>
