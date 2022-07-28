@@ -68,7 +68,20 @@ div.detail-card div.card-body {
         width: 120px;
         margin: 0 auto;
     }
-    .card-body, .card-text {
-        margin: 20px 0 60px!important;
+
+    .edad {
+        margin: 20px 0 20px 0 !important;
+    }
+    .card-text {
+        margin-bottom: 0 !important;
+    }
+    .Shop {
+        position: absolute;
+        bottom: 0;
+        right: 100px;
+        width: 150px;
+    }
+    .card-body {
+        margin-bottom: 50px !important;
     }
 }

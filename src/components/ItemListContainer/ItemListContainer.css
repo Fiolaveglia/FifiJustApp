@@ -16,6 +16,9 @@
     .card{
         height: 300px;
     }
+    .detail-card {
+        height: auto !important;
+    }
     .CardContainer {
         margin: 10px;
         padding: 0;
@@ -31,5 +34,11 @@
         height: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
+    }
+    .DetailContainer {
+        padding-bottom: 20px !important;
+    }
+    .advertencia {
+        display: none;
     }
 }

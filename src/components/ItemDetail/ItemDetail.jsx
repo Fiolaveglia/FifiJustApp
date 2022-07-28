@@ -21,7 +21,7 @@ const ItemDetail = ({id, nombre, precio, img, img_2, img_3, detalle, stock, cate
     }
     
     return (
-        <div>
+        <div className='DetailContainer'>
             <h2>Detalle del producto</h2>
             <div className="container">
                 <div className="row">
@@ -48,22 +48,18 @@ const ItemDetail = ({id, nombre, precio, img, img_2, img_3, detalle, stock, cate
                                     alt={nombre}
                                 />
                             </Carousel.Item>
-
                         </Carousel>
                     </div>
                     <div className="col-sm-12 col-lg-6">
-                        <Card
-                            className="detail-card"
-                            key={id}
-                        >
-                            <Card.Body style={{ margin: "25px" }}>
+                        <Card className="detail-card" key={id}>
+                            <Card.Body  className='card-size' style={{ margin: "25px" }}>
                                 <h3>Aceite de {nombre}</h3>
                                 <h4 className='mb-4'>{categoria}</h4>
                                 <Card.Text className="text-detail mx-lg-4">
                                     {detalle}
                                 </Card.Text>
-                                <Card.Text className='mx-4'>Edad recomendada: {edad}</Card.Text>
-                                <Card.Text id='xs'className='mx-lg-4 mt-5'>
+                                <Card.Text className='mx-4 edad'>Edad recomendada: {edad}</Card.Text>
+                                <Card.Text id='xs'className='mx-lg-4 mt-5 advertencia'>
                                     Los productos Just brindan una acción
                                     reconfortante y de bienestar. No reemplazan
                                     la recomendación calificada del médico y
