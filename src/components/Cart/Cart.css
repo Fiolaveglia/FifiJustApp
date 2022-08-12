@@ -17,6 +17,10 @@
     background-color: #66806A;
     color: #fff;
 }
+.btn-primary {
+    background-color: #66806A;
+    border: 1px solid #66806A;
+}
 @media screen and (max-width: 600px) {
     .columns {
         flex-wrap: wrap !important;

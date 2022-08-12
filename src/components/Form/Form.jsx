@@ -103,7 +103,7 @@ const Formulario = () => {
     return (
         <div className="container">
             <h2>Orden de compra</h2>
-            <form onSubmit={handleSubmit(crearOrden)}>
+            <form onSubmit={handleSubmit(crearOrden)}  className="container">
                 <label>Nombre completo</label>
                     <input 
                         type='text' 
