@@ -21,9 +21,9 @@ const Cart = () => {
                         return (
                         <div className="columns row justify-content-between align-items-center border-bottom " key={p.id}>
                             <img className='col-xl-1 img-fluid ' src={p.img} alt= {p.nombre}/>
-                            <p className='col-xl-2 col-6 mt-4 ps-4 fw-semibold'>Aceite de {p.nombre}</p>
-                            <p className='col-xl-2 col-6 mt-4 text-end pe-4 fw-semibold'> $ {p.precio}</p>
-                            <p className='col-xl-2 col-6 ps-4 me-0 pe-0'>Cantidad: {p.cantidad}</p>
+                            <p className='col-xl-2 col-6 mt-4 m-lg-0 ps-4 fw-semibold'>Aceite de {p.nombre}</p>
+                            <p className='col-xl-2 col-6 mt-4 m-lg-0 text-end pe-4 fw-semibold'> $ {p.precio}</p>
+                            <p className='col-xl-2 col-6 ps-4 me-0 m-lg-0 pe-0'>Cantidad: {p.cantidad}</p>
                             <div className='col-xl-2 col-4 d-flex justify-content-end p-0'>
                                 <button className="remove-product m-3" onClick={() => eliminarProducto(p.id)}>
                                     Eliminar
@@ -40,9 +40,9 @@ const Cart = () => {
                     
                 </div>
                 <div className='row botones d-flex justify-content-center'>
-                    <button className='btn btn-primary col-10 m-3' onClick={() => limpiarCarrito()} style={{margin: '20px'}}>Vaciar carrito</button>
-                    <Link to ='/' className='btn btn-primary col-10 m-3'  style={{margin: '20px'}}>Continuar comprando</Link>
-                    <Link to ='/form' className='btn btn-primary col-10 m-3' style={{margin: '20px'}} >Finalizar compra</Link>
+                    <button className='btn btn-primary col-10 col-xl-2 m-3 btn-checkout' onClick={() => limpiarCarrito()} style={{margin: '20px'}}>Vaciar carrito</button>
+                    <Link to ='/' className='btn btn-primary col-10 col-xl-2 m-3 btn-checkout'  style={{margin: '20px'}}>Continuar comprando</Link>
+                    <Link to ='/form' className='btn btn-primary col-10 col-xl-2 m-3 btn-checkout'  style={{margin: '20px'}} >Finalizar compra</Link>
                 </div>
         </div>
             }

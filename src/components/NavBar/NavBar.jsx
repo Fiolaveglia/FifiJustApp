@@ -25,7 +25,7 @@ const NavBar = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto">
+                    <Nav className="ms-auto align-items-center">
                         {data && data.map((cat) => (
                                 <NavLink key={cat.id} to={`/category/${cat.id}`} className="ButtonNav">
                                     {cat.descripcion}

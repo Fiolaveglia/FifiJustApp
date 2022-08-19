@@ -15,14 +15,33 @@
 }
 .remove-product:hover {
     background-color: #66806A;
-    color: #fff;
+    color: #fff !important;
 }
 .btn-primary {
     background-color: #66806A;
-    border: 1px solid #66806A;
+    border: none;
+}
+.btn-checkout {
+    color: #fff !important;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.btn-checkout:hover {
+    color: #66806A !important;
+    background-color: #FFC286;
+    border: none;
 }
 @media screen and (max-width: 600px) {
     .columns {
         flex-wrap: wrap !important;
+    }
+    .btn-checkout:hover {
+        color: #66806A !important;
+        background-color: #FFC286;
+        border: none !important;
+    
     }
 }
