@@ -21,7 +21,7 @@ const ItemDetail = ({id, nombre, precio, img, img_2, img_3, detalle, stock, cate
     }
     
     return (
-        <div className='DetailContainer'>
+        <div style={{marginBottom: "40px"}}>
             <h2>Detalle del producto</h2>
             <div className="container">
                 <div className="row">
@@ -68,7 +68,7 @@ const ItemDetail = ({id, nombre, precio, img, img_2, img_3, detalle, stock, cate
                                     Son aceites de uso Dermatológicamente
                                     probados
                                 </Card.Text>
-                                {cantidad > 0 ? (<Link to="/cart" className="ButtonDetail Shop">Finalizar compra</Link> ) : (<ItemCount stock={stock} inicial={ valorInicial === 0 ? 1 : valorInicial} onAdd={onAdd} />)}
+                                {cantidad > 0 ? (<Link to="/cart" className="Shop">Finalizar compra</Link> ) : (<ItemCount stock={stock} inicial={ valorInicial === 0 ? 1 : valorInicial} onAdd={onAdd} />)}
                             </Card.Body>
                         </Card>
                     </div>

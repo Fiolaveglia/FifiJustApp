@@ -2,8 +2,3 @@ Footer {
     border-top: 1px solid #F2F2F2;
     background-color: #fff;
 }
-@media screen and (max-width: 600px) {
-    footer {
-        display: none;
-    }
-}

@@ -30,12 +30,12 @@ const ItemListContainer = () => {
     }
 
     return (
-            <div>
+            <main>
                 <h1>AROMATERAPIA</h1>
-                <div className='CardContainer'>
+                <div className='container d-flex flex-wrap justify-content-evenly'>
                     {data.length > 0 ? <ItemList productos = {data} /> : <h2> No hay productos</h2>}
                 </div>
-            </div>)
+            </main>)
 }
 
 export default ItemListContainer

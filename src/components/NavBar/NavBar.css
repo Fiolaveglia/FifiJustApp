@@ -1,25 +1,13 @@
-nav {
-    margin-top: 20px;
-}
-.app-header {
-    margin-top: 40px;
-    width: 100%;
-}
 .Logo {
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100x;
+    margin-left: 15px;
 }
 .ButtonNav {
-    color: #66806A;
-    text-decoration: none;
+    width: 15.625rem;
     font-size: 20px;
-    margin: 40px 80px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    text-align: center;
+    padding: 10px; 
     transition: all 1s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 1s;
@@ -27,14 +15,11 @@ nav {
     -o-transition: all 1s;
 }
 .ButtonNav:hover:not(:last-of-type) {
-    background-color: #66806A;
-    color: #fff;
+    color: #FFC286 !important;
 }
-.ButtonNav:active {
-    background-color:  #FFC286;
-    color: #66806A;
-}
+
 .ButtonNav:last-of-type{
+    padding-left: 10rem;
     transition: none;
     -webkit-transition: none;
     -moz-transition: none;
@@ -45,10 +30,7 @@ nav {
     filter: brightness(0) saturate(100%) invert(97%) sepia(21%) saturate(3665%) hue-rotate(302deg) brightness(105%) contrast(101%);
     -webkit-filter: brightness(0) saturate(100%) invert(97%) sepia(21%) saturate(3665%) hue-rotate(302deg) brightness(105%) contrast(101%);
 }
-h1 {
-    text-align: center;
-    font-size: 48px;
-}
+
 @media screen and (max-width: 600px) {
     .navbar {
         margin: 0 40px;

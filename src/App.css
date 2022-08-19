@@ -2,14 +2,16 @@
 
 * {
     font-family: 'Recoleta';
-    color: #66806A;
+    color: #66806A !important;
 }
 
 @font-face {
     font-family: 'Recoleta';
     src: url(./fuentes/Recoleta-RegularDEMO.otf);
 }
-
+header {
+    border-bottom: 1px solid #F2F2F2
+}
 p {
     font-family: 'Raleway', sans-serif; 
     text-align: left;
@@ -24,11 +26,17 @@ input {
     font-size: 14px !important;
     padding: 10px !important;
 }
+h1 {
+    text-align: center;
+    font-size: 48px;
+    color: #66806a !important;
+    margin: 40px 0 !important;
+}
 h2 {
     text-align: center; 
     font-weight: 700 !important;
     text-transform: uppercase;
-    margin: 20px 0 60px 0 !important;
+    margin: 40px 0 !important;
 }
 small {
     font-family: 'Raleway', sans-serif; 

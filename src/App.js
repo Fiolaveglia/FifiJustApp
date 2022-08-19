@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <CartContextProvider>
         <BrowserRouter>
-          <header className="app-header">
+          <header className='container'>
             <NavBar />
           </header>
           <Routes>
@@ -27,6 +27,7 @@ function App() {
             <Route path = "*" element = {<h1>PAGE NOT FOUND</h1>} />
           </Routes>
         </BrowserRouter>
+        
       </CartContextProvider>
       <Footer/>
     </div>

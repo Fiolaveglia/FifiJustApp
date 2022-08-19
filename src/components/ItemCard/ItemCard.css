@@ -3,7 +3,6 @@
 }
 #xs {
     font-size: 12px;
-    
 }
 .card-img-top {
     border: 1px solid #eee;
@@ -20,16 +19,16 @@
 .ButtonDetail {
     text-decoration: none;
     font-size: 16px;
-    color: #fff;
+    color: #fff !important;
     margin: 40px 95px;
     background-color:#66806A;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid #66806A;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -45,7 +44,25 @@ div.detail-card div.card-body {
     margin-bottom: 20px;
 }
 .Shop {
-    margin: 0;
+    background-color: #66806A !important;
+    color: #eee !important;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+.Shop:hover {
+    background-color: #FFC286 !important;
+    color: #66806A !important;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
 .carousel-indicators > button {
     background-color: rgba(121, 121, 121, 0.842) !important;
@@ -67,8 +84,18 @@ div.detail-card div.card-body {
         text-align: center;
         width: 120px;
         margin: 0 auto;
+        transition: 0.5s all;
     }
-
+    .ButtonDetail:hover {
+        color: transparent!important;
+        background-color: transparent!important;
+        border: 1px solid #FFC286 !important;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
     .edad {
         margin: 20px 0 20px 0 !important;
     }
@@ -78,8 +105,7 @@ div.detail-card div.card-body {
     .Shop {
         position: absolute;
         bottom: 0;
-        right: 100px;
-        width: 150px;
+        right: 35%;;
     }
     .card-body {
         margin-bottom: 50px !important;

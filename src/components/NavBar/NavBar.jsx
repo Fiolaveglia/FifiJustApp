@@ -1,6 +1,6 @@
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
-import { Navbar, Container, Nav } from 'react-bootstrap'
+import { Navbar,  Nav } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import { useFirestore } from '../../hooks/useFirestore'
@@ -19,14 +19,13 @@ const NavBar = () => {
     }
     
     return (
-        <Navbar expand="lg">
-            <Container>
+        <Navbar expand="lg" className=''>
                 <Navbar.Brand href="/">
                     <img className="Logo" src="../img/logo.png" alt="logo"></img>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="ms-auto">
                         {data && data.map((cat) => (
                                 <NavLink key={cat.id} to={`/category/${cat.id}`} className="ButtonNav">
                                     {cat.descripcion}
@@ -37,7 +36,6 @@ const NavBar = () => {
                         </NavLink>
                     </Nav>
                 </Navbar.Collapse>
-            </Container>
         </Navbar>
     );
 }
