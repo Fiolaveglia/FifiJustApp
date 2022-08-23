@@ -100,7 +100,7 @@ Ver ejemplo: [`.env.example`] (https://github.com/Fiolaveglia/React-Proyecto/blo
 ![Alt Text](./public/img/demo.gif)
 
 ### Deploy 
-fifijustapp.netlify.app
+[Fifi Just App](https://fifijustapp.netlify.app)
 
 ### Autora 
 
